@@ -1,0 +1,77 @@
+
+# change code of llm services and add in reasearch api
+
+
+# FILES-
+reasearch.py - API for request and orchastration
+company_resolve.py - fix the name of the the input company name 
+company_data.py - external company API
+database.py - database connection
+models.py database models
+
+
+
+
+######################################
+ctrl+c (to stoc treminal process)
+pip freeze > requirements.txt
+tree app /F (to check the folder structure)
+
+## Installs -
+pip install email-validator
+
+
+
+
+## GIT - 
+git log --oneline ( for checking the previous commit)
+
+1st time -
+git add .
+git commit -m "update"
+git remote add origin ADD_URL_OF_REPO  , 
+git remote -v (to connect with git repo)
+git push -u origin main
+
+next time -
+git add .
+git commit -m "update"
+git push
+
+
+
+# For fastapi-
+
+pip install fastapi uvicorn pydantic-settings
+uvicorn app.main:app --reload (to run the main inside app folder)
+
+
+
+
+
+## Postgresql -
+
+port - 5432
+p - Sourabh2026
+
+fastapi call get db >> get db >> database engine
+
+connect to postgresql - psql -U postgres
+
+\l - to list all dbs in pgadmin
+\c enterprise_research - type this if you see db name in list ,it will connect.
+
+\dt : Lists all tables in your current database (to confirm your table was created).
+\d table_name : Shows the structure/columns of a specific table (e.g., \d employees).
+\q : Exits the PostgreSQL terminal when you are finished.
+
+insert data into table -
+text{
+'''
+INSERT INTO users {email}
+VALUES {: email}
+'''
+},
+{
+    "email":"sourabh@1234.com"
+}
